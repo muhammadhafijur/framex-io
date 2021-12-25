@@ -19,18 +19,18 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='home' element={<Home />} />
 
-          <Route path='shop' element={<Home />}>
+          <Route path='/shop' element={<Home />}>
             <Route path=":shopId" element={<Home />} />
           </Route>
 
-          <Route path='about-us' element={<Home />} />
-          <Route path='contact-us' element={<Home />} />
-          <Route path='login' element={<Home />} />
+          <Route path='/about-us' element={<Home />} />
+          <Route path='/contact-us' element={<Home />} />
+          <Route path='/login' element={<Home />} />
 
-          <Route path='/dashboard' element={<Dashboard /> } />
+          <Route path='/dashboard' element={<Dashboard />} />
 
 
-          <Route path='shop' element={
+          <Route path='/shop' element={
             <PrivateRoute>
               <Home />
             </PrivateRoute>} />

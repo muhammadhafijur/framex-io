@@ -1,4 +1,5 @@
 import React from 'react';
+import Carousel from '../../Carousel/Carousel';
 import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar';
 import Shop from '../../Shop/Shop';

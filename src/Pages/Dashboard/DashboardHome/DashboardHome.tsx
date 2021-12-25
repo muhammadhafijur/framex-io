@@ -106,7 +106,7 @@ const DashboardHome = () => {
                                     </svg>
                                 </span>
                                 <span className="mx-4 text-sm font-normal">
-                                    Log Out
+                                    Log-Out
                                 </span>
                             </Link>
 

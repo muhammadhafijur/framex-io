@@ -12,9 +12,9 @@ SwiperCore.use([Autoplay]);
 
 const Carousel = () => {
   return (
-      <div className="flex items-center w-10/12 mx-auto ">
+      <div className="flex py-12 border-b-2 border-gray-800 my-12 items-center w-11/12 mx-auto">
         <div className="w-1/5">
-          <h1 className="text-center text-3xl font-extrabold text-black dark:text-white sm:text-4xl border-r-4 border-gray-800">Our Partner</h1>
+          <h1 className="text-center text-3xl font-bold text-black dark:text-white md:text-4xl border-r-4 border-gray-800">Our Partner</h1>
         </div>
         <div className="w-4/5">
           <div className="text-start">
@@ -32,7 +32,7 @@ const Carousel = () => {
         className="mySwiper"
         autoplay={{
           delay: 2000,
-          disableOnInteraction: false,
+          disableOnInteraction: false
         }}
       >
         <SwiperSlide>

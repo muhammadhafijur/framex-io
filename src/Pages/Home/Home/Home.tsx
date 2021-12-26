@@ -8,6 +8,7 @@ import Footer from "../../Shared/Footer/Footer";
 import NavBar from "../../Shared/NavBar/NavBar";
 import Shop from "../../Shop/Shop";
 import Banner from "../Banner/Banner";
+import Carousel from "../Carousel/Carousel";
 import Follow from "../Follow/Follow";
 import Subscribe from "../Subscribe/Subscribe";
 
@@ -22,6 +23,7 @@ const Home = () => {
       <Explore></Explore>
       <FramexAcademy></FramexAcademy>
       <Instagram></Instagram>
+      <Carousel/>
       <Subscribe></Subscribe>
       <Footer></Footer>
     </div>

@@ -26,7 +26,7 @@ const Blog = () => {
                 </a>
                 </div>
             </div>
-            <button className="bg-gray-800 text-white font-medium text-lg block mx-auto px-6 py-4">FIND MORE PHOTOGRAPHY INSPIRATION ON THE BLOG</button>
+            <button className="bg-gray-800 shadow-lg shadow-gray-800/50 text-white font-medium text-lg block mx-auto px-6 py-4">FIND MORE PHOTOGRAPHY INSPIRATION ON THE BLOG</button>
         </div>
         </div>
     );

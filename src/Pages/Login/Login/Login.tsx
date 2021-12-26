@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  const [loginData, setLoginData] = useState({});
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
 
   const handleOnChange = (e: any) => {
     const field = e.target.name;
@@ -12,6 +15,15 @@ const Login = () => {
 
   const handleLoginSubmit = (e: any) => {
     e.preventDefault();
+    fetch("https://framex-server.herokuapp.com/login", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(loginData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (

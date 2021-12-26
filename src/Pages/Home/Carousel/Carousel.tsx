@@ -15,9 +15,9 @@ SwiperCore.use([Autoplay]);
 const Carousel = () => {
   return (
    
-      <div className="flex w-10/12 mx-auto">
+      <div className="flex items-center w-10/12 mx-auto ">
         <div className="w-1/5">
-          <h1 className="text-center text-3xl font-extrabold text-black dark:text-white sm:text-4xl">Our Partner</h1>
+          <h1 className="text-center text-3xl font-extrabold text-black dark:text-white sm:text-4xl border-r-4 border-gray-800">Our Partner</h1>
         </div>
         <div className="w-4/5">
           <div className="text-start">

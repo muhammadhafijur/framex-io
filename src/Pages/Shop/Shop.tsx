@@ -10,7 +10,7 @@ const Shop = () => {
         />
       </div>
       <div className="w-2/3">
-        <div className="text-start w-1/2 py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+        <div className="text-start py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
           <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
             Shop our one tap photo editing presets It&#x27;s today or never.
           </h2>

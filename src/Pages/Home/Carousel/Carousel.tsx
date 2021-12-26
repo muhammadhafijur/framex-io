@@ -2,8 +2,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
 import "./Carousel.css";
 
 // import Swiper core and required modules

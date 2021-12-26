@@ -1,0 +1,74 @@
+[
+  {
+    "id": 101,
+    "title": "Photo Shoots",
+    "description": "Feeling beautiful and creative? Come to our studio and order a single, couple or family photo shoot",
+    "price": 55.99,
+    "ratings": 4.5,
+    "img": "https://i.picsum.photos/id/1045/200/200.jpg?hmac=NOMPYGOtm89-zlf7NNDG7qSjCOy3XpvrdQRBF4aUZgE"
+  },
+  {
+    "id": 102,
+    "title": "Portrait Photo",
+    "description": "We create the most beautiful portrait photos, edit them to your preference, or give out the original shots",
+    "price": 60.99,
+    "ratings": 4,
+    "img": "https://i.picsum.photos/id/1045/200/200.jpg?hmac=NOMPYGOtm89-zlf7NNDG7qSjCOy3XpvrdQRBF4aUZgE"
+  },
+  {
+    "id": 103,
+    "title": "Film Photography",
+    "description": "Old school photography is available at our studio! Come and order a photo or learn how to work with film",
+    "price": 99.99,
+    "ratings": 5,
+    "img": "https://i.picsum.photos/id/1045/200/200.jpg?hmac=NOMPYGOtm89-zlf7NNDG7qSjCOy3XpvrdQRBF4aUZgE"
+  },
+  {
+    "id": 104,
+    "title": "Photo Printing",
+    "description": "We offer high - quality photo printing services for everyone who would like to frame their memories",
+    "price": 75.59,
+    "ratings": 3.5,
+    "img": "https://i.picsum.photos/id/1045/200/200.jpg?hmac=NOMPYGOtm89-zlf7NNDG7qSjCOy3XpvrdQRBF4aUZgE"
+  },
+  {
+    "id": 105,
+    "title": "Studio Space Rental",
+    "description": "Rent one of our studios to have it for yourself while working on photography, photo editing or anything else",
+    "price": 89.99,
+    "ratings": 4.7,
+    "img": "https://i.picsum.photos/id/1045/200/200.jpg?hmac=NOMPYGOtm89-zlf7NNDG7qSjCOy3XpvrdQRBF4aUZgE"
+  },
+  {
+    "id": 106,
+    "title": "Wedding Photo Shoots",
+    "description": "Feeling beautiful and creative? Come to our studio and order a single, couple or family photo shoot",
+    "price": 99.99,
+    "ratings": 5,
+    "img": "https://i.picsum.photos/id/1045/200/200.jpg?hmac=NOMPYGOtm89-zlf7NNDG7qSjCOy3XpvrdQRBF4aUZgE"
+  },
+  {
+    "id": 107,
+    "title": "Tour Portrait Shoots",
+    "description": "We create the most beautiful portrait photos, edit them to your preference, or give out the original shots",
+    "price": 69.99,
+    "ratings": 4,
+    "img": "https://i.picsum.photos/id/1045/200/200.jpg?hmac=NOMPYGOtm89-zlf7NNDG7qSjCOy3XpvrdQRBF4aUZgE"
+  },
+  {
+    "id": 108,
+    "title": "Presentation Photo Shoots",
+    "description": "Rent one of our studios to have it for yourself while working on photography, photo editing or anything else",
+    "price": 59.99,
+    "ratings": 3,
+    "img": "https://i.picsum.photos/id/1045/200/200.jpg?hmac=NOMPYGOtm89-zlf7NNDG7qSjCOy3XpvrdQRBF4aUZgE"
+  },
+  {
+    "id": 109,
+    "title": "Anniversary Photo Shoots",
+    "description": "We create the most beautiful portrait photos, edit them to your preference, or give out the original shots",
+    "price": 89.99,
+    "ratings": 4.5,
+    "img": "https://i.picsum.photos/id/1045/200/200.jpg?hmac=NOMPYGOtm89-zlf7NNDG7qSjCOy3XpvrdQRBF4aUZgE"
+  }
+]

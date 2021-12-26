@@ -10,6 +10,7 @@ import Home from './Pages/Home/Home/Home';
 import NotFound from './Pages/Not-Found/NotFound';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import Login from './Pages/Login/Login/Login';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
 
           <Route path='/about-us' element={<Home />} />
           <Route path='/contact-us' element={<Home />} />
-          <Route path='/login' element={<Home />} />
+          <Route path='/login' element={<Login />} />
 
           <Route path='/dashboard' element={<Dashboard />} />
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Blog from '../../Blog/Blog';
+import Carousel from '../../Carousel/Carousel';
 import Explore from '../../Explore/Explore';
 import FramexAcademy from '../../FramexAcademy/FramexAcademy';
 import Instagram from '../../Instagram/Instagram';
@@ -22,6 +23,7 @@ const Home = () => {
             <Explore></Explore>
             <FramexAcademy></FramexAcademy>
             <Instagram></Instagram>
+            <Carousel/>
             <Subscribe></Subscribe>
             <Footer></Footer>
         </div>

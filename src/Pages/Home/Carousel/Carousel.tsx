@@ -7,12 +7,11 @@ import "./Carousel.css";
 // import Swiper core and required modules
 import SwiperCore, { Autoplay } from "swiper";
 
-// install Swiper modules
+// install Swiper module
 SwiperCore.use([Autoplay]);
 
 const Carousel = () => {
   return (
-   
       <div className="flex items-center w-10/12 mx-auto ">
         <div className="w-1/5">
           <h1 className="text-center text-3xl font-extrabold text-black dark:text-white sm:text-4xl border-r-4 border-gray-800">Our Partner</h1>

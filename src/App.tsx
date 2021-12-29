@@ -12,6 +12,7 @@ import NotFound from './Pages/Not-Found/NotFound';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Register/Register';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/about-us' element={<Home />} />
           <Route path='/contact-us' element={<Home />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
 
           <Route path='/dashboard' element={<Dashboard />} />
 

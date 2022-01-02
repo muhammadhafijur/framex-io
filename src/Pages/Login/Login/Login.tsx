@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
@@ -22,7 +23,13 @@ const Login = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data.acknowledged === true) {
+          const { name, email } = data;
+          let person = { name, email };
+          let value = JSON.stringify(person);
+          sessionStorage.setItem("user", value);
+          navigate("/dashboard");
+        }
       });
   };
 

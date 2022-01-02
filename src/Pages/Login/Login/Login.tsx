@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleOnChange = (e: any) => {
+    const field = e.target.name;
+    const newData = { ...loginData, [field]: e.target.value };
+    setLoginData(newData);
+  };
+
+  const handleLoginSubmit = (e: any) => {
+    e.preventDefault();
+    fetch("https://framex-server.herokuapp.com/login", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(loginData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
+
   return (
     <div>
       <div className="flex flex-wrap w-full">
@@ -13,7 +37,10 @@ const Login = () => {
           </div>
           <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
             <p className="text-3xl text-center">Welcome.</p>
-            <form className="flex flex-col pt-3 md:pt-8">
+            <form
+              className="flex flex-col pt-3 md:pt-8"
+              onSubmit={handleLoginSubmit}
+            >
               <div className="flex flex-col pt-4">
                 <div className="flex relative ">
                   <span className=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
@@ -28,10 +55,12 @@ const Login = () => {
                     </svg>
                   </span>
                   <input
-                    type="text"
+                    type="email"
                     id="design-login-email"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     placeholder="Email"
+                    name="email"
+                    onChange={handleOnChange}
                   />
                 </div>
               </div>
@@ -53,6 +82,8 @@ const Login = () => {
                     id="design-login-password"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     placeholder="Password"
+                    name="password"
+                    onChange={handleOnChange}
                   />
                 </div>
                 <div className="flex gap-x-4 mt-8 item-center">

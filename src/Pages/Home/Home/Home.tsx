@@ -3,7 +3,6 @@ import Blog from "../../Blog/Blog";
 import Explore from "../../Explore/Explore";
 import FramexAcademy from "../../FramexAcademy/FramexAcademy";
 import Instagram from "../../Instagram/Instagram";
-
 import Footer from "../../Shared/Footer/Footer";
 import NavBar from "../../Shared/NavBar/NavBar";
 import Shop from "../../Shop/Shop";

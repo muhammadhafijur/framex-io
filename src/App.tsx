@@ -17,7 +17,7 @@ import AddServices from './Pages/Dashboard/AddServices/AddServices';
 
 function App() {
   return (
-    <div className="">      
+    <div className="">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -32,8 +32,10 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
 
-          <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/addservices' element={<AddServices />} />
+          <Route path='/dashboard' element={<Dashboard />} >
+            {/* <Route path=":/addservices"></Route> */}
+          </Route>
+          {/* <Route path='/addservices' element={<AddServices />} /> */}
 
 
           <Route path='/shop' element={

@@ -13,6 +13,7 @@ import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import AddServices from './Pages/Dashboard/AddServices/AddServices';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path='/register' element={<Register />} />
 
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/addservices' element={<AddServices />} />
 
 
           <Route path='/shop' element={

@@ -6,7 +6,7 @@ const Shop = () => {
       <div className="w-1/3">
         <img
           src="https://image.freepik.com/free-vector/shop-with-sign-we-are-open_52683-38687.jpg"
-          className="h-full max-w-1/2 hidden lg:block right-0 top-0"
+          className="h-full max-w-1/2 hidden lg:block right-0 top-0" alt="shop"
         />
       </div>
       <div className="w-2/3">

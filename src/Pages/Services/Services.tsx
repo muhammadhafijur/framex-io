@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Rating from "react-rating";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [services, setServices] = useState<any[]>([]);
@@ -34,9 +35,11 @@ const Services = () => {
                   fullSymbol={<i className="fas fa-star bg-orange-400" />}
                 />
               </div>
-              <button className="p-2 px-6 mt-4 bg-gray-500 text-white rounded-md hover:bg-gray-600">
-                Book Now
-              </button>
+              <Link to={`/purchase/${service?._id}`}>
+                <button className="p-2 px-6 mt-4 bg-gray-500 text-white rounded-md hover:bg-gray-600">
+                  Book Now
+                </button>
+              </Link>
             </section>
           </section>
         ))}

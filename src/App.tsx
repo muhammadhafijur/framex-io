@@ -17,6 +17,7 @@ import AddServices from './Pages/Dashboard/AddServices/AddServices';
 import Purchase from './Pages/Purchase/Purchase';
 import Details from './Pages/Details/Details';
 
+
 function App() {
   return (
     <div className="">
@@ -24,7 +25,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
-
           <Route path='/shop' element={<Home />} />
           <Route path='/about-us' element={<Home />} />
           <Route path='/contact-us' element={<Home />} />
@@ -34,7 +34,6 @@ function App() {
           <Route path='/details' element={<Details />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='*' element={<NotFound />} />
-
         </Routes>
       </BrowserRouter>
     </div>

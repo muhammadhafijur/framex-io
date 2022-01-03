@@ -27,11 +27,11 @@ const Services = () => {
                 <Rating
                   readonly
                   placeholderRating={service?.ratings}
-                  emptySymbol={<i className="far fa-star text-orange-400"></i>}
+                  emptySymbol={<i className="far fa-star text-orange-500"></i>}
                   placeholderSymbol={
-                    <i className="fas fa-star text-orange-400 " />
+                    <i className="fas fa-star text-orange-500 " />
                   }
-                  fullSymbol={<i className="fas fa-star bg-orange-400" />}
+                  fullSymbol={<i className="fas fa-star bg-orange-500" />}
                 />
               </div>
               <button className="p-2 px-6 mt-4 bg-gray-500 text-white rounded-md hover:bg-gray-600">

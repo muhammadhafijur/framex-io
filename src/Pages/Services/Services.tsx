@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import Rating from "react-rating";
 
 const Services = () => {
   const [services, setServices] = useState<any[]>([]);
@@ -20,9 +21,20 @@ const Services = () => {
                 alt=""
                 className="inline-block h-52 w-full rounded-md"
               />
-              <h2 className="text-3xl my-5">{service?.title}</h2>
-              <h2 className="font-semibold mb-5">${service?.price}</h2>
-              <button className="p-2 px-6 bg-gray-500 text-white rounded-md hover:bg-gray-600">
+              <h2 className="text-3xl my-2">{service?.title}</h2>
+              <h2 className="font-semibold mb-1">${service?.price}</h2>
+              <div>
+                <Rating
+                  readonly
+                  placeholderRating={service?.ratings}
+                  emptySymbol={<i className="far fa-star text-orange-400"></i>}
+                  placeholderSymbol={
+                    <i className="fas fa-star text-orange-400 " />
+                  }
+                  fullSymbol={<i className="fas fa-star bg-orange-400" />}
+                />
+              </div>
+              <button className="p-2 px-6 mt-4 bg-gray-500 text-white rounded-md hover:bg-gray-600">
                 Book Now
               </button>
             </section>

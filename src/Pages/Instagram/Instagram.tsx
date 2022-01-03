@@ -4,7 +4,7 @@ const Instagram = () => {
   const [events, setEvents] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("/fakeData.json")
+    fetch("https://framex-server.herokuapp.com/api/products")
       .then((res) => res.json())
       .then((data) => {
         setEvents(data);
@@ -17,6 +17,8 @@ const Instagram = () => {
         Follow <span className="text-indigo-500 underline">@framex</span> on
         Instagram
       </h1>
+
+      
       <div className="container grid grid-cols-4 gap-2 mx-auto w-full">
         {events.map((event) => (
           <div className="rounded">

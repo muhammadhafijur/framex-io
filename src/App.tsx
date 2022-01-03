@@ -15,6 +15,7 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AddServices from './Pages/Dashboard/AddServices/AddServices';
 import Purchase from './Pages/Purchase/Purchase';
+import Details from './Pages/Details/Details';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/purchase' element={<Purchase />} />
+          <Route path='/details' element={<Details />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='*' element={<NotFound />} />
 

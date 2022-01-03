@@ -13,33 +13,26 @@ import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import AddServices from './Pages/Dashboard/AddServices/AddServices';
+import Purchase from './Pages/Purchase/Purchase';
 
 function App() {
   return (
-    <div className="">      
+    <div className="">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='home' element={<Home />} />
+          <Route path='/home' element={<Home />} />
 
-          <Route path='/shop' element={<Home />}>
-            <Route path=":shopId" element={<Home />} />
-          </Route>
-
+          <Route path='/shop' element={<Home />} />
           <Route path='/about-us' element={<Home />} />
           <Route path='/contact-us' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-
+          <Route path='/purchase' element={<Purchase />} />
           <Route path='/dashboard' element={<Dashboard />} />
-
-
-          <Route path='/shop' element={
-            <PrivateRoute>
-              <Home />
-            </PrivateRoute>} />
-
           <Route path='*' element={<NotFound />} />
+
         </Routes>
       </BrowserRouter>
     </div>

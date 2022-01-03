@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-<p>**Testing**</p>
+<p>Testing</p>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

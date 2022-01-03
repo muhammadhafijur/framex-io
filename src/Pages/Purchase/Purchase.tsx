@@ -16,18 +16,30 @@ const Purchase = () => {
       .then((data) => setService(data));
   }, []);
 
-  console.log(service);
-
   // react hook form
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data: any) => console.log(data);
-
-  console.log(watch("example"));
+  const onSubmit = (data: any) => {
+    data.img = service?.img;
+    data.title = service?.title;
+    data.price = service?.price;
+    fetch("https://framex-server.herokuapp.com/api/order", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          alert("Booking Added Successfully");
+          reset();
+        }
+      });
+  };
 
   return (
     <>

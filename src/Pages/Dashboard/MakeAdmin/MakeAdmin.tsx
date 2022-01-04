@@ -11,7 +11,8 @@ const MakeAdmin = () => {
 
   const handleOnSubmit = (e: any) => {
     e.preventDefault();
-    fetch("https://framex-server.herokuapp.com/api/makeadmin", {
+
+    fetch("http://localhost:5000/api/makeAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(email),
@@ -60,7 +61,7 @@ const MakeAdmin = () => {
                               placeholder="Email"
                               className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
                               name="email"
-                              onBlur={handleOnChange}
+                              onChange={handleOnChange}
                             />
                           </div>
 

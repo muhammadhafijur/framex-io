@@ -23,9 +23,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/purchase/:id" element={<Purchase />} />
-          <Route path="/dashboard" element={<Dashboard />}/>
-          <Route path="/dashboard/addservices" element={<AddServices/>} />
-          <Route path="/details" element={<Details />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/addservices" element={<AddServices />} />
+          <Route path="/details/:id" element={<Details />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

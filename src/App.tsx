@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import AddServices from "./Pages/Dashboard/AddServices/AddServices";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import Details from "./Pages/Details/Details";
 import Home from "./Pages/Home/Home/Home";
@@ -23,7 +24,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/purchase/:id" element={<Purchase />} />
           <Route path="/dashboard" element={<Dashboard />}/>
-          <Route path="/dashboard/addservices" element={<AddServices />} />
+          <Route path="/dashboard/addservices" element={<AddServices/>} />
           <Route path="/details" element={<Details />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,39 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from "react";
 
 const MyOrders = () => {
-    const [orders, setOrders] = useState([])
-  
-    // useEffect(() => {
-    //   fetch('')
-    //   .then(res => res.json())
-    //   .then(data => setOrders(data.filter(item => item.email === user.email)))
-    // }, [])
+  const [orders, setOrders] = useState([]);
 
+  // useEffect(() => {
+  //   fetch('')
+  //   .then(res => res.json())
+  //   .then(data => setOrders(data.filter(item => item.email === user.email)))
+  // }, [])
 
-    // const handleDelete = (id) => {
-    //     const proceed = window.confirm("Are you sure you want to delete ?");
-    //     if (proceed) {
-    //       const url = `https://dry-mountain-92011.herokuapp.com/order/${id}`;
-    //       fetch(url, {
-    //         method: "DELETE",
-    //       })
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //           if (data.deletedCount) {
-    //             alert(
-    //                     'Your file has been deleted.',
-    //                   )
-    //             const remaining = orders.filter((order) => order._id !== id);
-    //             setOrders(remaining);
-    //           }
-    //         });
-    //     }
-    //   };
+  // const handleDelete = (id) => {
+  //     const proceed = window.confirm("Are you sure you want to delete ?");
+  //     if (proceed) {
+  //       const url = `https://dry-mountain-92011.herokuapp.com/order/${id}`;
+  //       fetch(url, {
+  //         method: "DELETE",
+  //       })
+  //         .then((res) => res.json())
+  //         .then((data) => {
+  //           if (data.deletedCount) {
+  //             alert(
+  //                     'Your file has been deleted.',
+  //                   )
+  //             const remaining = orders.filter((order) => order._id !== id);
+  //             setOrders(remaining);
+  //           }
+  //         });
+  //     }
+  //   };
 
-
-    return (
-        <div>
-            {/* <div>
+  return (
+    <div>
+      {/* <div>
       <div className="w-3/4 mx-auto">
       <h1 className="mb-8 text-4xl text-center">My Orders</h1>
       <img className="rounded-full mb-2" src={user.photoURL} alt="" />
@@ -66,8 +64,8 @@ const MyOrders = () => {
       ))}
     </div>
     </div> */}
-        </div>
-    );
+    </div>
+  );
 };
 
 export default MyOrders;

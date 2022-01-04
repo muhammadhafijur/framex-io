@@ -3,7 +3,9 @@ import React from "react";
 const Subscribe = () => {
   return (
     <div className="my-12">
-        <h1 className="text-3xl text-center font-semibold">Subscribe To Our Newsletter</h1>
+      <h1 className="text-3xl text-center font-semibold">
+        Subscribe To Our Newsletter
+      </h1>
       <div className="flex w-11/12 mx-auto flex-col max-w-4xl md:h-56 bg-white rounded-lg shadow-lg overflow-hidden md:flex-row my-10">
         <div className="md:flex items-center justify-center md:w-1/2 md:bg-gray-700">
           <div className="py-6 px-8 md:py-0">

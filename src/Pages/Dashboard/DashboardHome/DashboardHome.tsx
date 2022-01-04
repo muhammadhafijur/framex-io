@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink, Outlet, Route, Routes } from "react-router-dom";
 import AddServices from "../AddServices/AddServices";
 
+
 const DashboardHome = () => {
   return (
     <div>
@@ -56,7 +57,7 @@ const DashboardHome = () => {
                   </Link>
                   <a
                     className="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500"
-                    href="#"
+                    href="/"
                   >
                     <span className="text-left">
                       <svg
@@ -74,7 +75,8 @@ const DashboardHome = () => {
                   </a>
                   <a
                     className="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500"
-                    href="#"
+                    href="/"
+
                   >
                     <span className="text-left">
                       <svg
@@ -92,7 +94,8 @@ const DashboardHome = () => {
                   </a>
                   <a
                     className="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500"
-                    href="#"
+
+                    href="/"
                   >
                     <span className="text-left">
                       <svg
@@ -112,7 +115,9 @@ const DashboardHome = () => {
                   </a>
                   <a
                     className="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500"
-                    href="#"
+
+                    href="/"
+
                   >
                     <span className="text-left">
                       <svg
@@ -130,7 +135,9 @@ const DashboardHome = () => {
                   </a>
                   <a
                     className="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500"
-                    href="#"
+
+                    href="/"
+
                   >
                     <span className="text-left">
                       <svg
@@ -187,7 +194,9 @@ const DashboardHome = () => {
                     </div>
                   </div>
                   <div className="relative p-1 flex items-center justify-end w-1/4 ml-5 mr-4 sm:mr-0 sm:right-auto">
-                    <a href="#" className="block relative">
+
+                    <a href="/" className="block relative">
+
                       <img
                         alt="profil"
                         src="/images/person/1.jpg"

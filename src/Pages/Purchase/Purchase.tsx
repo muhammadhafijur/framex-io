@@ -27,6 +27,7 @@ const Purchase = () => {
     data.img = service?.img;
     data.title = service?.title;
     data.price = service?.price;
+
     fetch("https://framex-server.herokuapp.com/api/order", {
       method: "POST",
       headers: { "content-type": "application/json" },

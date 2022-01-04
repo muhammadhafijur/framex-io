@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import Rating from "react-rating";
 import { useParams } from "react-router-dom";
 import Footer from "../Shared/Footer/Footer";
 import NavBar from "../Shared/NavBar/NavBar";
-import Rating from "react-rating";
 
 const Purchase = () => {
   const { id } = useParams();

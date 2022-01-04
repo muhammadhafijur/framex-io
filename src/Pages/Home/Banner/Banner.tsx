@@ -14,7 +14,7 @@ const Banner = () => {
           <div className="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
             <div className="text-center">
               <h1 className="text-3xl font-semibold text-white uppercase lg:text-3xl mb-12">
-              Photography is the art of making memories tangible.”{" "}
+                Photography is the art of making memories tangible.”{" "}
               </h1>
               <button className="w-full px-4 py-2 mt-4 text-xl font-medium text-gray-800 uppercase transition-colors duration-200 transform bg-gray-100 lg:w-auto hover:bg-gray-200 focus:outline-none focus:bg-blue-500">
                 JOIN OUR PHOTOGRAPHY ADVENTURE

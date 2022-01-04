@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 const Instagram = () => {
-  const [events, setEvents] = useState<any[]>([]);
+  const [event, setEvent] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("/fakeData.json")
+    fetch("/instafakedata.json")
       .then((res) => res.json())
       .then((data) => {
-        setEvents(data);
+        setEvent(data);
       });
   }, []);
   return (
@@ -18,10 +18,10 @@ const Instagram = () => {
         Instagram
       </h1>
       <div className="container grid grid-cols-4 gap-2 mx-auto w-full">
-        {events.map((event) => (
+        {event.map((event) => (
           <div className="rounded">
             <a href="/">
-              <img src={event.img} alt="" />
+              <img src={event.img} alt="" className="inline-block h-64 w-full rounded-md"/>
             </a>
           </div>
         ))}

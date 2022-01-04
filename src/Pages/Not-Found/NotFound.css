@@ -1,17 +1,17 @@
-.notFound-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid red; */
-    height: 100vh;
+.notFound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  height: 100vh;
 }
 
-.notFound-container button{
-    background-color: #1F2937;
-    margin-top: 2rem;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 400;
+.notFound-container button {
+  background-color: #1f2937;
+  margin-top: 2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 400;
 }

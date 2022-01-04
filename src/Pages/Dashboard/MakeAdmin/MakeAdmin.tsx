@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 
 const MakeAdmin = () => {
+  const [email, setEmail] = useState({ email: "" });
+
+  const handleOnChange = (e: any) => {
+    const field = e.target.name;
+    const newData = { ...email, [field]: e.target.value };
+    setEmail(newData);
+  };
+
+  const handleOnSubmit = (e: any) => {
+    e.preventDefault();
+
+    fetch("https://framex-server.herokuapp.com/api/makeAdmin", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(email),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          alert("Admin Added Successfully");
+          e.target.reset();
+        }
+      });
+  };
+
   return (
     <div>
       <div>
-        <h1 className="text-center text-5xl bg-green-500 py-2 rounded">
-          Make an Admin
-        </h1>
+        <h1 className="text-center text-5xl py-2 rounded">Make an Admin</h1>
         <div>
-          <form>
-            <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+          <form onSubmit={handleOnSubmit}>
+            <div className=" mt-5 p-6 bg-gray-100 flex items-center justify-center">
               <div className="container max-w-screen-lg mx-auto">
                 <div>
                   <h2 className="font-semibold text-xl text-gray-600">
@@ -35,7 +58,10 @@ const MakeAdmin = () => {
                             <input
                               type="email"
                               id="full_name"
+                              placeholder="Email"
                               className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                              name="email"
+                              onChange={handleOnChange}
                             />
                           </div>
 

@@ -30,7 +30,10 @@ const MyOrders = () => {
   //   };
 
   return (
-    <div>
+    <div className="text-center font-medium text-lg">
+      {/* delete className, h2 an p when working. */}
+      <h2>Working on progress...</h2>
+      <p><small>Anyone have to add this section. Who is working on this section?</small></p>
       {/* <div>
       <div className="w-3/4 mx-auto">
       <h1 className="mb-8 text-4xl text-center">My Orders</h1>

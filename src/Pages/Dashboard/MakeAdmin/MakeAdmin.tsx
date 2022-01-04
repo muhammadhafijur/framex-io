@@ -12,7 +12,7 @@ const MakeAdmin = () => {
   const handleOnSubmit = (e: any) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/api/makeAdmin", {
+    fetch("https://framex-server.herokuapp.com/api/makeAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(email),

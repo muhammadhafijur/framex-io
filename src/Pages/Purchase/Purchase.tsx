@@ -14,7 +14,7 @@ const Purchase = () => {
     fetch(`https://framex-server.herokuapp.com/api/products/${id}`)
       .then((res) => res.json())
       .then((data) => setService(data));
-  }, []);
+  }, [id]);
 
   // react hook form
   const {
@@ -46,7 +46,7 @@ const Purchase = () => {
       <NavBar />
       <div className="container mx-auto h-screen mt-10 mb-20">
         <h2 className="flex items-center justify-center text-5xl font-bold">
-          Confirm your booking for Weeding Photography
+          Confirm your booking for {service?.title}
         </h2>
         <div className="flex justify-between flex-wrap mt-20">
           <div className="flex flex-col items-center justify-center max-w-[50%]  p-3">

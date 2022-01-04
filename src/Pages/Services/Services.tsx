@@ -34,11 +34,19 @@ const Services = () => {
                   fullSymbol={<i className="fas fa-star bg-orange-400" />}
                 />
               </div>
-              <Link to={`/purchase/${service?._id}`}>
-                <button className="p-2 px-6 mt-4 bg-gray-500 text-white rounded-md hover:bg-gray-600">
-                  Book Now
-                </button>
-              </Link>
+              <div className="space-x-5">
+                <Link to={`/details/${service?._id}`}>
+                  <button className="p-2 px-6 mt-4 bg-gray-500 text-white rounded-md hover:bg-gray-600">
+                    View Details
+                  </button>
+                </Link>
+
+                <Link to={`/purchase/${service?._id}`}>
+                  <button className="p-2 px-6 mt-4 bg-gray-500 text-white rounded-md hover:bg-gray-600">
+                    Book Now
+                  </button>
+                </Link>
+              </div>
             </section>
           </section>
         ))}

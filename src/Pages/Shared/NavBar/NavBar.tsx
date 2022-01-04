@@ -74,7 +74,7 @@ const NavBar = () => {
             <span className="ml-3 text-xl">Framex</span>
           </Link>
           <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-            {user?.email ? (
+            {user?.email !== "" ? (
               <>
                 <NavLink
                   to="/dashboard"

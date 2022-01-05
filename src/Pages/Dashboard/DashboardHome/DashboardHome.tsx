@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 
 const DashboardHome = () => {
+
+    const [admin, setAdmin] = useState(false);
+    const [user, setUser] = useState({
+        email: "",
+        name: "",
+    });
+
+    useEffect(() => {
+        let sessionUser = sessionStorage.getItem("user");
+        if (sessionUser) {
+            let parsedUser = JSON.parse(sessionUser);
+            setUser(parsedUser);
+        }
+
+        const email = user?.email;
+        fetch(`https://framex-server.herokuapp.com/api/checkAdmin/${email}`)
+            .then((res) => res.json())
+            .then((data) => {
+                if (data?.role === "admin") {
+                    setAdmin(true);
+                }
+
+            })
+    }, [user?.email]);
+
     return (
         <div>
             <main className="bg-gray-100 dark:bg-gray-800 rounded-2xl h-screen overflow-hidden relative">
@@ -46,33 +71,33 @@ const DashboardHome = () => {
                                         </span>
                                         <span className="mx-4 text-sm font-normal">My Orders</span>
                                     </Link>
+                                    {admin && <>
+                                        <Link
+                                            to="/dashboard/add-services"
+                                            className="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500"
+                                        >
+                                            <span className="text-left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                            </span>
+                                            <span className="mx-4 text-sm font-normal">
+                                                Add Services
+                                            </span>
+                                        </Link>
+                                        <Link
+                                            to="/dashboard/make-admin"
+                                            className="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500"
 
-                                    <Link
-                                        to="/dashboard/add-services"
-                                        className="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500"
-                                    >
-                                        <span className="text-left">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </span>
-                                        <span className="mx-4 text-sm font-normal">
-                                            Add Services
-                                        </span>
-                                    </Link>
-                                    <Link
-                                        to="/dashboard/make-admin"
-                                        className="w-full font-thin uppercase text-gray-500 dark:text-gray-200 flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:text-blue-500"
-
-                                    >
-                                        <span className="text-left">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                                            </svg>
-                                        </span>
-                                        <span className="mx-4 text-sm font-normal">Make Admin</span>
-                                    </Link>
-
+                                        >
+                                            <span className="text-left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                                                </svg>
+                                            </span>
+                                            <span className="mx-4 text-sm font-normal">Make Admin</span>
+                                        </Link>
+                                    </>}
 
                                 </div>
                             </nav>

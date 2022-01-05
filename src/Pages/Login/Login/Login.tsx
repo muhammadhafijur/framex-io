@@ -25,8 +25,8 @@ const Login = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged === true) {
-          const { name, email } = data;
-          let person = { name, email };
+          const { name, email, role } = data;
+          let person = { name, email, role };
           let value = JSON.stringify(person);
           sessionStorage.setItem("user", value);
           navigate("/dashboard");

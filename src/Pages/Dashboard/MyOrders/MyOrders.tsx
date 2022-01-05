@@ -22,7 +22,6 @@ const MyOrders = () => {
             .then((res) => res.json())
             .then((data) => {
               console.log(data);
-
               setOrders(data);
             });
         } else {
@@ -31,7 +30,7 @@ const MyOrders = () => {
             .then((data) => setOrders(data));
         }
       });
-  }, []);
+  }, [user?.email]);
 
   const handleDelete = (id: any) => {
     const proceed = window.confirm("Are you sure you want to cancel?");
@@ -55,7 +54,9 @@ const MyOrders = () => {
     <div className="text-center font-medium text-lg">
       <div>
         <div className="w-3/4 mx-auto">
-          <h1 className="mb-8 text-4xl text-center">Orders</h1>
+          <h1 className="mb-8 text-4xl text-center">
+            Available Orders: {orders?.length}
+          </h1>
           <h1 className="mb-4 text-xl ">
             Welcome to FrameX,{" "}
             <span className="font-bold text-gray-700">{user?.name}</span>

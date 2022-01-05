@@ -38,32 +38,39 @@ function App() {
             }
           />
 
-          <Route path="/details/:id" element={
-            <PrivateRoute>
-              <Details />
-            </PrivateRoute>
-          } />
-
+          <Route
+            path="/details/:id"
+            element={
+              <PrivateRoute>
+                <Details />
+              </PrivateRoute>
+            }
+          />
 
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<DefaultDashboard />} />
             <Route path="/dashboard/my-orders" element={<MyOrders />} />
 
             {/* admin route */}
-            <Route path="/dashboard/add-services" element={
-              <AdminRoute>
-                <AddServices />
-              </AdminRoute>
-            } />
-            <Route path="/dashboard/make-admin" element={
-              <AdminRoute>
-                <MakeAdmin />
-              </AdminRoute>} />
-
+            <Route
+              path="/dashboard/add-services"
+              element={
+                <AdminRoute>
+                  <AddServices />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/dashboard/make-admin"
+              element={
+                <AdminRoute>
+                  <MakeAdmin />
+                </AdminRoute>
+              }
+            />
           </Route>
 
           <Route path="*" element={<NotFound />} />
-
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import AdminRoute from "./Pages/AdminRoute/AdminRoute";
 import AddServices from "./Pages/Dashboard/AddServices/AddServices";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import DefaultDashboard from "./Pages/Dashboard/Dashboard/DefaultDashboard";
@@ -26,6 +27,8 @@ function App() {
           <Route path="/contact-us" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+
+          {/* Private Route */}
           <Route
             path="/purchase/:id"
             element={
@@ -34,14 +37,33 @@ function App() {
               </PrivateRoute>
             }
           />
+
+          <Route path="/details/:id" element={
+            <PrivateRoute>
+              <Details />
+            </PrivateRoute>
+          } />
+
+
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<DefaultDashboard />} />
             <Route path="/dashboard/my-orders" element={<MyOrders />} />
-            <Route path="/dashboard/add-services" element={<AddServices />} />
-            <Route path="/dashboard/make-admin" element={<MakeAdmin />} />
+
+            {/* admin route */}
+            <Route path="/dashboard/add-services" element={
+              <AdminRoute>
+                <AddServices />
+              </AdminRoute>
+            } />
+            <Route path="/dashboard/make-admin" element={
+              <AdminRoute>
+                <MakeAdmin />
+              </AdminRoute>} />
+
           </Route>
-          <Route path="/details/:id" element={<Details />} />
+
           <Route path="*" element={<NotFound />} />
+
         </Routes>
       </BrowserRouter>
     </div>

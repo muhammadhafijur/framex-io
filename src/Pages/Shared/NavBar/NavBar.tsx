@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Menu, Transition } from "@headlessui/react";
 
@@ -306,76 +306,22 @@ const NavBar = () => {
                 >
                   Dashboard
                 </NavLink>
-                <button
-                  onClick={handleLogOut}
-                  className="inline-flex mr-2 font-bold items-center bg-red-500 border-0 py-1 px-3 focus:outline-none hover:bg-red-400 rounded text-white mt-4 md:mt-0"
-                >
-                  Log Out
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    className="w-4 h-4 ml-1"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </button>
-              </>
-            ) : (
-              <>
-                <Link to="/login">
-                  <button className="inline-flex mr-2 font-bold items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-                    Login
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      className="w-4 h-4 ml-1"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </button>
-                </Link>
-                <Link to="/register">
-                  <button className="inline-flex mr-2 font-bold items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-                    Register
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      className="w-4 h-4 ml-1"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </button>
-                </Link>
                 {/* DROPDOWN MENU */}
                 <div className="inline-flex mr-2 font-bold items-center bg-gray-100 border-0 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
                   <Menu as="div" className="relative inline-block text-left">
                     <div>
                       <Menu.Button className="inline-flex mr-2 font-bold items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-                        Options
+                        {user?.name}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
+                          className="h-5 w-5 animate-bounce"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
                         >
                           <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
+                            fillRule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clipRule="evenodd"
                           />
                         </svg>
                       </Menu.Button>
@@ -494,6 +440,7 @@ const NavBar = () => {
                           <Menu.Item>
                             {({ active }) => (
                               <button
+                                onClick={handleLogOut}
                                 className={`${
                                   active
                                     ? "bg-violet-500 text-white"
@@ -511,7 +458,7 @@ const NavBar = () => {
                                     aria-hidden="true"
                                   />
                                 )}
-                                Delete
+                                Log Out
                               </button>
                             )}
                           </Menu.Item>
@@ -520,6 +467,41 @@ const NavBar = () => {
                     </Transition>
                   </Menu>
                 </div>
+              </>
+            ) : (
+              <>
+                <Link to="/login">
+                  <button className="inline-flex mr-2 font-bold items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                    Login
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      className="w-4 h-4 ml-1"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </Link>
+                <Link to="/register">
+                  <button className="inline-flex mr-2 font-bold items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                    Register
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      className="w-4 h-4 ml-1"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </Link>
               </>
             )}
           </div>

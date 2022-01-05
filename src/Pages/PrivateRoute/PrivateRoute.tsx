@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 
 const PrivateRoute = ({ children }: { children: JSX.Element }) => {
-  const [user, setUser] = useState({
-    email: "",
-    name: "",
-  });
+  const [user, setUser] = useState({});
   let location = useLocation();
 
   useEffect(() => {
@@ -16,7 +13,7 @@ const PrivateRoute = ({ children }: { children: JSX.Element }) => {
     }
   }, []);
 
-  if (user?.email) {
+  if (user) {
     return children;
   }
 

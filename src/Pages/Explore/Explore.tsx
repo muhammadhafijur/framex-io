@@ -5,7 +5,7 @@ const Explore = () => {
     <div>
       <div>
         <div
-          className="w-full my-8 bg-center bg-fixed bg-cover h-96"
+          className="w-full my-12 bg-center bg-fixed bg-cover h-96"
           style={{
             backgroundImage:
               "url(https://images.unsplash.com/photo-1441716844725-09cedc13a4e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)",

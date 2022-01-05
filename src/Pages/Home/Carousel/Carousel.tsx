@@ -17,7 +17,7 @@ const Carousel = () => {
         </h1>
       </div>
       <div className="w-4/5">
-        <div className="text-start">
+        <div className="text-start flex-col">
           <Swiper
             slidesPerView={4}
             spaceBetween={20}

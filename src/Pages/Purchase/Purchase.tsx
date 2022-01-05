@@ -7,8 +7,19 @@ import NavBar from "../Shared/NavBar/NavBar";
 
 const Purchase = () => {
   const { id } = useParams();
-
   const [service, setService] = useState<any>({});
+  const [user, setUser] = useState({
+    email: "",
+    name: "",
+  });
+
+  useEffect(() => {
+    let sessionUser = sessionStorage.getItem("user");
+    if (sessionUser) {
+      let parsedUser = JSON.parse(sessionUser);
+      setUser(parsedUser);
+    }
+  }, []);
 
   useEffect(() => {
     fetch(`https://framex-server.herokuapp.com/api/products/${id}`)
@@ -86,21 +97,25 @@ const Purchase = () => {
               onSubmit={handleSubmit(onSubmit)}
               className="w-full flex flex-col items-center justify-center"
             >
-              <input
-                defaultValue="akbarkha@gmail.com"
-                {...register("email", { required: true })}
-                className="border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 w-3/5"
-                type="email"
-                placeholder="Your Email"
-              />{" "}
+              {user?.email && (
+                <input
+                  defaultValue={user?.email}
+                  {...register("email", { required: true })}
+                  className="border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 w-3/5"
+                  type="email"
+                  placeholder="Your Email"
+                />
+              )}{" "}
               <br />
-              <input
-                defaultValue="Akbar Kha"
-                {...register("name", { required: true })}
-                className="border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 w-3/5"
-                type="text"
-                placeholder="Your Name"
-              />{" "}
+              {user?.name && (
+                <input
+                  defaultValue={user?.name}
+                  {...register("name", { required: true })}
+                  className="border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 w-3/5"
+                  type="text"
+                  placeholder="Your Name"
+                />
+              )}{" "}
               <br />
               <input
                 placeholder="Your Phone"

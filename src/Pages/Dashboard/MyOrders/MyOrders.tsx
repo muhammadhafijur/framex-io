@@ -20,7 +20,11 @@ const MyOrders = () => {
         if (data?.role === "admin") {
           fetch("https://framex-server.herokuapp.com/api/orders")
             .then((res) => res.json())
-            .then((data) => setOrders(data));
+            .then((data) => {
+              console.log(data);
+
+              setOrders(data);
+            });
         } else {
           fetch(`https://framex-server.herokuapp.com/api/order/${email}`)
             .then((res) => res.json())

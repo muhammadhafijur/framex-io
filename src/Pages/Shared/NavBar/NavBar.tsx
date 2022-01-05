@@ -84,7 +84,7 @@ const NavBar = () => {
                 </NavLink>
                 <button
                   onClick={handleLogOut}
-                  className="inline-flex mr-2 font-bold items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+                  className="inline-flex mr-2 font-bold items-center bg-red-500 border-0 py-1 px-3 focus:outline-none hover:bg-red-400 rounded text-white mt-4 md:mt-0"
                 >
                   Log Out
                   <svg

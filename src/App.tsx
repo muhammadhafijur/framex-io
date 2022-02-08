@@ -28,7 +28,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-          {/* Private Route */}
+          {/* Private purchase route Route */}
           <Route
             path="/purchase/:id"
             element={
